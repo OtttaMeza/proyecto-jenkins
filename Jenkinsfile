@@ -23,11 +23,14 @@ pipeline {
             }
         }
 
-        stage('Deploy Simulation') {
+        stage('Deploy Container') {
             steps {
-                echo 'Simulando despliegue...'
-                sh 'mkdir -p dist'
-                sh 'cp target/*.jar dist/'
+                echo 'Desplegando app...'
+                sh '''
+                docker stop mi-app || true
+                docker rm mi-app || true
+                docker run -d -p 9090:9090 --name mi-app mi-app:latest
+                '''
             }
         }
     }
