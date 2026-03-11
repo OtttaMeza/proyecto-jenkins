@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 echo 'Desplegando app...'
-                sh '''
+                echo "Desplegando app..."
                 docker stop mi-app || true
                 docker rm mi-app || true
                 docker run -d -p 9090:9090 --name mi-app mi-app:latest
