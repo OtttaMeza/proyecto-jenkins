@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        // Define la ruta de Maven si no está en el PATH de Jenkins
-        // MAVEN_HOME = 'C:\\Program Files\\apache-maven-3.8.2'
-    }
 
     stages {
         stage('Checkout') {
