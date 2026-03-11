@@ -1,0 +1,5 @@
+com\example\proyecto\model\Task.class
+com\example\proyecto\ProyectoJenkinsApplication.class
+com\example\proyecto\repository\TaskRepository.class
+com\example\proyecto\service\TaskService.class
+com\example\proyecto\controller\TaskController.class
